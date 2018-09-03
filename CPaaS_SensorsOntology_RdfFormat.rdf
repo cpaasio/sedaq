@@ -1,133 +1,265 @@
-﻿<?xml version = '1.0' encoding = 'UTF-8'?>
-<rdf:RDF xmlns="http://www.semanticweb.org/bfh/ontologies/SEDAQ#" xml:base="http://www.semanticweb.org/bfh/ontologies/SEDAQ" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:xml5fa1e080f9ae4484ba130166cb5ea4a8="http://www.w3.org/XML/1998/namespace#">
-  <owl:Ontology rdf:about="http://www.semanticweb.org/bfh/ontologies/SEDAQ#" />
-  <!-- 
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/bfh/ontologies/SEDAQ#"
+     xml:base="http://www.semanticweb.org/bfh/ontologies/SEDAQ"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xml5fa1e080f9ae4484ba130166cb5ea4a8="http://www.w3.org/XML/1998/namespace#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/bfh/ontologies/SEDAQ#"/>
+    
+
+
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Object Properties
     //
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
-  <!-- http://www.semanticweb.org/bfh/ontologies/SEDAQ#deliversDataFor -->
-  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bfh/ontologies/SEDAQ#deliversDataFor">
-    <rdfs:domain rdf:resource="http://www.semanticweb.org/bfh/ontologies/SEDAQ#DataSource" />
-    <rdfs:range rdf:resource="http://www.semanticweb.org/bfh/ontologies/SEDAQ#VirtualSensor" />
-    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty" />
-  </owl:ObjectProperty>
-  <!-- http://www.semanticweb.org/bfh/ontologies/SEDAQ#describes -->
-  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bfh/ontologies/SEDAQ#describes">
-    <rdfs:domain rdf:resource="http://www.semanticweb.org/bfh/ontologies/SEDAQ#MeasurementInfo" />
-    <rdfs:range rdf:resource="http://www.semanticweb.org/bfh/ontologies/SEDAQ#MeasurementType" />
-    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty" />
-  </owl:ObjectProperty>
-  <!-- http://www.semanticweb.org/bfh/ontologies/SEDAQ#isFeatureOf -->
-  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bfh/ontologies/SEDAQ#isFeatureOf">
-    <rdfs:range rdf:resource="http://www.semanticweb.org/bfh/ontologies/SEDAQ#Clock" />
-    <rdfs:domain rdf:resource="http://www.semanticweb.org/bfh/ontologies/SEDAQ#ClockSynchronisation" />
-    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty" />
-  </owl:ObjectProperty>
-  <!-- http://www.semanticweb.org/bfh/ontologies/SEDAQ#isMetadataFor -->
-  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bfh/ontologies/SEDAQ#isMetadataFor">
-    <rdfs:range rdf:resource="http://www.semanticweb.org/bfh/ontologies/SEDAQ#EmpiricalMeasurement" />
-    <rdfs:domain rdf:resource="http://www.semanticweb.org/bfh/ontologies/SEDAQ#MeasurementMetadata" />
-    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty" />
-  </owl:ObjectProperty>
-  <!-- http://www.semanticweb.org/bfh/ontologies/SEDAQ#isPartOf -->
-  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bfh/ontologies/SEDAQ#isPartOf">
-    <rdfs:domain rdf:resource="http://www.semanticweb.org/bfh/ontologies/SEDAQ#Clock" />
-    <rdfs:range rdf:resource="http://www.semanticweb.org/bfh/ontologies/SEDAQ#Device" />
-    <rdfs:domain rdf:resource="http://www.semanticweb.org/bfh/ontologies/SEDAQ#PowerSupply" />
-    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty" />
-  </owl:ObjectProperty>
-  <!-- http://www.semanticweb.org/bfh/ontologies/SEDAQ#pertainsTo -->
-  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bfh/ontologies/SEDAQ#pertainsTo">
-    <rdfs:domain rdf:resource="http://www.semanticweb.org/bfh/ontologies/SEDAQ#MeasurementInfo" />
-    <rdfs:range rdf:resource="http://www.semanticweb.org/bfh/ontologies/SEDAQ#VirtualEntity" />
-    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty" />
-  </owl:ObjectProperty>
-  <!-- http://www.semanticweb.org/bfh/ontologies/SEDAQ#providesInfoAbout -->
-  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bfh/ontologies/SEDAQ#providesInfoAbout">
-    <rdfs:range rdf:resource="http://www.semanticweb.org/bfh/ontologies/SEDAQ#PowerSupply" />
-    <rdfs:domain rdf:resource="http://www.semanticweb.org/bfh/ontologies/SEDAQ#PowerSupplyInfo" />
-    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty" />
-  </owl:ObjectProperty>
-  <!-- http://www.semanticweb.org/bfh/ontologies/SEDAQ#records -->
-  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bfh/ontologies/SEDAQ#records">
-    <rdfs:range rdf:resource="http://www.semanticweb.org/bfh/ontologies/SEDAQ#EmpiricalMeasurement" />
-    <rdfs:domain rdf:resource="http://www.semanticweb.org/bfh/ontologies/SEDAQ#Sensor" />
-    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty" />
-  </owl:ObjectProperty>
-  <!-- 
+
+    
+
+
+    <!-- http://www.semanticweb.org/bfh/ontologies/SEDAQ#deliversDataFor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bfh/ontologies/SEDAQ#deliversDataFor">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bfh/ontologies/SEDAQ#DataSource"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/bfh/ontologies/SEDAQ#VirtualSensor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bfh/ontologies/SEDAQ#describes -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bfh/ontologies/SEDAQ#describes">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bfh/ontologies/SEDAQ#MeasurementInfo"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/bfh/ontologies/SEDAQ#MeasurementType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bfh/ontologies/SEDAQ#isFeatureOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bfh/ontologies/SEDAQ#isFeatureOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bfh/ontologies/SEDAQ#ClockSynchronisation"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/bfh/ontologies/SEDAQ#Clock"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bfh/ontologies/SEDAQ#isMetadataFor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bfh/ontologies/SEDAQ#isMetadataFor">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bfh/ontologies/SEDAQ#MeasurementMetadata"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/bfh/ontologies/SEDAQ#EmpiricalMeasurement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bfh/ontologies/SEDAQ#isPartOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bfh/ontologies/SEDAQ#isPartOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bfh/ontologies/SEDAQ#Clock"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bfh/ontologies/SEDAQ#PowerSupply"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/bfh/ontologies/SEDAQ#Device"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bfh/ontologies/SEDAQ#pertainsTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bfh/ontologies/SEDAQ#pertainsTo">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bfh/ontologies/SEDAQ#MeasurementInfo"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/bfh/ontologies/SEDAQ#VirtualEntity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bfh/ontologies/SEDAQ#providesInfoAbout -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bfh/ontologies/SEDAQ#providesInfoAbout">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bfh/ontologies/SEDAQ#PowerSupplyInfo"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/bfh/ontologies/SEDAQ#PowerSupply"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bfh/ontologies/SEDAQ#records -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bfh/ontologies/SEDAQ#records">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bfh/ontologies/SEDAQ#Sensor"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/bfh/ontologies/SEDAQ#EmpiricalMeasurement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Classes
     //
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
-  <!-- http://www.semanticweb.org/bfh/ontologies/SEDAQ#Clock -->
-  <owl:Class rdf:about="http://www.semanticweb.org/bfh/ontologies/SEDAQ#Clock">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bfh/ontologies/SEDAQ#Device" />
-    <rdfs:subClassOf>
-      <owl:Class>
-        <owl:complementOf rdf:resource="http://www.semanticweb.org/bfh/ontologies/SEDAQ#PowerSupply" />
-      </owl:Class>
-    </rdfs:subClassOf>
-  </owl:Class>
-  <!-- http://www.semanticweb.org/bfh/ontologies/SEDAQ#ClockSynchronisation -->
-  <owl:Class rdf:about="http://www.semanticweb.org/bfh/ontologies/SEDAQ#ClockSynchronisation">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bfh/ontologies/SEDAQ#QualityMetadata" />
-  </owl:Class>
-  <!-- http://www.semanticweb.org/bfh/ontologies/SEDAQ#DataSource -->
-  <owl:Class rdf:about="http://www.semanticweb.org/bfh/ontologies/SEDAQ#DataSource">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bfh/ontologies/SEDAQ#QualityMetadata" />
-  </owl:Class>
-  <!-- http://www.semanticweb.org/bfh/ontologies/SEDAQ#Device -->
-  <owl:Class rdf:about="http://www.semanticweb.org/bfh/ontologies/SEDAQ#Device" />
-  <!-- http://www.semanticweb.org/bfh/ontologies/SEDAQ#EmpiricalMeasurement -->
-  <owl:Class rdf:about="http://www.semanticweb.org/bfh/ontologies/SEDAQ#EmpiricalMeasurement">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bfh/ontologies/SEDAQ#Measurement" />
-  </owl:Class>
-  <!-- http://www.semanticweb.org/bfh/ontologies/SEDAQ#Measurement -->
-  <owl:Class rdf:about="http://www.semanticweb.org/bfh/ontologies/SEDAQ#Measurement" />
-  <!-- http://www.semanticweb.org/bfh/ontologies/SEDAQ#MeasurementInfo -->
-  <owl:Class rdf:about="http://www.semanticweb.org/bfh/ontologies/SEDAQ#MeasurementInfo">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bfh/ontologies/SEDAQ#Measurement" />
-  </owl:Class>
-  <!-- http://www.semanticweb.org/bfh/ontologies/SEDAQ#MeasurementMetadata -->
-  <owl:Class rdf:about="http://www.semanticweb.org/bfh/ontologies/SEDAQ#MeasurementMetadata">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bfh/ontologies/SEDAQ#QualityMetadata" />
-  </owl:Class>
-  <!-- http://www.semanticweb.org/bfh/ontologies/SEDAQ#MeasurementType -->
-  <owl:Class rdf:about="http://www.semanticweb.org/bfh/ontologies/SEDAQ#MeasurementType">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bfh/ontologies/SEDAQ#QualityMetadata" />
-  </owl:Class>
-  <!-- http://www.semanticweb.org/bfh/ontologies/SEDAQ#PhysicalSensor -->
-  <owl:Class rdf:about="http://www.semanticweb.org/bfh/ontologies/SEDAQ#PhysicalSensor">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bfh/ontologies/SEDAQ#Sensor" />
-    <rdfs:subClassOf>
-      <owl:Class>
-        <owl:complementOf rdf:resource="http://www.semanticweb.org/bfh/ontologies/SEDAQ#VirtualSensor" />
-      </owl:Class>
-    </rdfs:subClassOf>
-  </owl:Class>
-  <!-- http://www.semanticweb.org/bfh/ontologies/SEDAQ#PowerSupply -->
-  <owl:Class rdf:about="http://www.semanticweb.org/bfh/ontologies/SEDAQ#PowerSupply">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bfh/ontologies/SEDAQ#Device" />
-  </owl:Class>
-  <!-- http://www.semanticweb.org/bfh/ontologies/SEDAQ#PowerSupplyInfo -->
-  <owl:Class rdf:about="http://www.semanticweb.org/bfh/ontologies/SEDAQ#PowerSupplyInfo">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bfh/ontologies/SEDAQ#QualityMetadata" />
-  </owl:Class>
-  <!-- http://www.semanticweb.org/bfh/ontologies/SEDAQ#QualityMetadata -->
-  <owl:Class rdf:about="http://www.semanticweb.org/bfh/ontologies/SEDAQ#QualityMetadata" />
-  <!-- http://www.semanticweb.org/bfh/ontologies/SEDAQ#Sensor -->
-  <owl:Class rdf:about="http://www.semanticweb.org/bfh/ontologies/SEDAQ#Sensor">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bfh/ontologies/SEDAQ#Device" />
-  </owl:Class>
-  <!-- http://www.semanticweb.org/bfh/ontologies/SEDAQ#VirtualEntity -->
-  <owl:Class rdf:about="http://www.semanticweb.org/bfh/ontologies/SEDAQ#VirtualEntity" />
-  <!-- http://www.semanticweb.org/bfh/ontologies/SEDAQ#VirtualSensor -->
-  <owl:Class rdf:about="http://www.semanticweb.org/bfh/ontologies/SEDAQ#VirtualSensor">
-    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bfh/ontologies/SEDAQ#Sensor" />
-  </owl:Class>
+
+    
+
+
+    <!-- http://www.semanticweb.org/bfh/ontologies/SEDAQ#Clock -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bfh/ontologies/SEDAQ#Clock">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bfh/ontologies/SEDAQ#Device"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:complementOf rdf:resource="http://www.semanticweb.org/bfh/ontologies/SEDAQ#PowerSupply"/>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment>A clock</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bfh/ontologies/SEDAQ#ClockSynchronisation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bfh/ontologies/SEDAQ#ClockSynchronisation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bfh/ontologies/SEDAQ#QualityMetadata"/>
+        <rdfs:comment>The Clock Synchronization entity represents information about how and in which quality a clock used in one given device (sensor) is synchronized with respect to a predefined service for time information (e.g. an atomic clock or the longwave time signal DFC-77) used for time alignment. Possible shifts in time synchronization can lead to inaccurate timestamps or even data loss.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bfh/ontologies/SEDAQ#DataSource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bfh/ontologies/SEDAQ#DataSource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bfh/ontologies/SEDAQ#QualityMetadata"/>
+        <rdfs:comment>Each Data Source provides a unique specification of the underlying data repository or sensor. Using the information from the data source specification, the physical data source can be reached, and data can be obtained from it. Additionally, if the raw data are processed after extraction and before delivery to the remote client, a machine-readable documentation is provided. Such a document explains the transformations applied to the original data. Additionally, it states if the pre-processing steps can be bypassed, so that the raw data can be obtained.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bfh/ontologies/SEDAQ#Device -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bfh/ontologies/SEDAQ#Device">
+        <rdfs:comment>A Device. This is used as base class for other devices.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bfh/ontologies/SEDAQ#EmpiricalMeasurement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bfh/ontologies/SEDAQ#EmpiricalMeasurement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bfh/ontologies/SEDAQ#Measurement"/>
+        <rdfs:comment>The empirical data themselves are represented by Empirical Measurement, which is a container of empirical data produced during a given timespan by a sensor. These data are represented mathematically as time series and can be interpreted using Measurement Metadata.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bfh/ontologies/SEDAQ#Measurement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bfh/ontologies/SEDAQ#Measurement">
+        <rdfs:comment>A single Measurement Type represents knowledge about the measurement itself (as ontological entity), in contrast with the metadata representing knowledge about empirical data.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bfh/ontologies/SEDAQ#MeasurementInfo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bfh/ontologies/SEDAQ#MeasurementInfo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bfh/ontologies/SEDAQ#Measurement"/>
+        <rdfs:comment>If the client requesting information about measurements is not able to use a SPARQL endpoint or if such an endpoint is not available, a request for information (RFI) about sensor data or metadata can be posted using Measurement Info.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bfh/ontologies/SEDAQ#MeasurementMetadata -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bfh/ontologies/SEDAQ#MeasurementMetadata">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bfh/ontologies/SEDAQ#QualityMetadata"/>
+        <rdfs:comment>Measurement Metadata represents the metadata about empirical data measured at a given point in time by a Sensor. The information carried by Measurement Metadata allows a client to understand how to process raw data delivered by a given sensor, interpreting them in a semantically appropriate way.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bfh/ontologies/SEDAQ#MeasurementType -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bfh/ontologies/SEDAQ#MeasurementType">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bfh/ontologies/SEDAQ#QualityMetadata"/>
+        <rdfs:comment>A single Measurement Type represents knowledge about the measurement itself (as ontological entity), in contrast with the metadata representing knowledge about empirical data.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bfh/ontologies/SEDAQ#PhysicalSensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bfh/ontologies/SEDAQ#PhysicalSensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bfh/ontologies/SEDAQ#Sensor"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:complementOf rdf:resource="http://www.semanticweb.org/bfh/ontologies/SEDAQ#VirtualSensor"/>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment>A Physical Sensor represents a physical device (hardware) located at a specific geographic position (exactly defined by longitude, latitude and elevation in the context of a given cartographic reference system). Such a device is reachable by remote clients at a well-defined address on the network.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bfh/ontologies/SEDAQ#PowerSupply -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bfh/ontologies/SEDAQ#PowerSupply">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bfh/ontologies/SEDAQ#Device"/>
+        <rdfs:comment>A Power Supply</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bfh/ontologies/SEDAQ#PowerSupplyInfo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bfh/ontologies/SEDAQ#PowerSupplyInfo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bfh/ontologies/SEDAQ#QualityMetadata"/>
+        <rdfs:comment>The power supply provides electrical energy to the sensor. Information about how and in which quality a power supply delivers the requested energy to operate a given device is represented using Power Supply Info. Possible interrupts or smooth discharge can lead to inaccurate timestamps or even data loss.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bfh/ontologies/SEDAQ#QualityMetadata -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bfh/ontologies/SEDAQ#QualityMetadata"/>
+    
+
+
+    <!-- http://www.semanticweb.org/bfh/ontologies/SEDAQ#Sensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bfh/ontologies/SEDAQ#Sensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bfh/ontologies/SEDAQ#Device"/>
+        <rdfs:comment>A Sensor is any kind of physical or virtual device capable of reading data from the environment and offering a digital representation thereof to a client through a well-defined interface.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bfh/ontologies/SEDAQ#VirtualEntity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bfh/ontologies/SEDAQ#VirtualEntity"/>
+    
+
+
+    <!-- http://www.semanticweb.org/bfh/ontologies/SEDAQ#VirtualSensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bfh/ontologies/SEDAQ#VirtualSensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bfh/ontologies/SEDAQ#Sensor"/>
+        <rdfs:comment>A Virtual Sensor is a software mechanism able to read sensor data from one or more data sources and to represent their data as aggregation. The data sources themselves can be either sensors (either physical or virtual sensors) or data repositories such as databases or file systems.</rdfs:comment>
+    </owl:Class>
 </rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
