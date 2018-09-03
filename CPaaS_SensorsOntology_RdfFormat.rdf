@@ -125,6 +125,16 @@
     
 
 
+    <!-- http://www.semanticweb.org/bfh/ontologies/SEDAQ#accuracyLevel -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bfh/ontologies/SEDAQ#accuracyLevel">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bfh/ontologies/SEDAQ#MeasurementType"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.semanticweb.org/bfh/ontologies/SEDAQ#architecturalPattern -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bfh/ontologies/SEDAQ#architecturalPattern">
@@ -158,6 +168,76 @@
     
 
 
+    <!-- http://www.semanticweb.org/bfh/ontologies/SEDAQ#completenessLevel -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bfh/ontologies/SEDAQ#completenessLevel">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bfh/ontologies/SEDAQ#MeasurementType"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bfh/ontologies/SEDAQ#currentTimeWindow -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bfh/ontologies/SEDAQ#currentTimeWindow">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bfh/ontologies/SEDAQ#MeasurementType"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bfh/ontologies/SEDAQ#dataProvisioningType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bfh/ontologies/SEDAQ#dataProvisioningType">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bfh/ontologies/SEDAQ#MeasurementType"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment>{RAW_DATA, META_DATA, LINKED_DATA}</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bfh/ontologies/SEDAQ#firstMeasurementAvailable -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bfh/ontologies/SEDAQ#firstMeasurementAvailable">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bfh/ontologies/SEDAQ#MeasurementType"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bfh/ontologies/SEDAQ#frequency -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bfh/ontologies/SEDAQ#frequency">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bfh/ontologies/SEDAQ#MeasurementType"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:comment>[Hz]</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bfh/ontologies/SEDAQ#historicalDataAvailable -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bfh/ontologies/SEDAQ#historicalDataAvailable">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bfh/ontologies/SEDAQ#MeasurementType"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bfh/ontologies/SEDAQ#historicalTimeWindow -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bfh/ontologies/SEDAQ#historicalTimeWindow">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bfh/ontologies/SEDAQ#MeasurementType"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.semanticweb.org/bfh/ontologies/SEDAQ#installationDate -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bfh/ontologies/SEDAQ#installationDate">
@@ -176,6 +256,55 @@
         <rdfs:domain rdf:resource="http://www.semanticweb.org/bfh/ontologies/SEDAQ#Sensor"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
         <rdfs:comment>documentation about the installation process</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bfh/ontologies/SEDAQ#label -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bfh/ontologies/SEDAQ#label">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bfh/ontologies/SEDAQ#MeasurementType"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>possibly unique short text tag identifying the measurement type (localized)</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bfh/ontologies/SEDAQ#lastAverageValueAvailable -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bfh/ontologies/SEDAQ#lastAverageValueAvailable">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bfh/ontologies/SEDAQ#MeasurementType"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bfh/ontologies/SEDAQ#lastMaxValueAvailable -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bfh/ontologies/SEDAQ#lastMaxValueAvailable">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bfh/ontologies/SEDAQ#lastMinValueAvailable -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bfh/ontologies/SEDAQ#lastMinValueAvailable">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bfh/ontologies/SEDAQ#MeasurementType"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bfh/ontologies/SEDAQ#measurementTimestampAvailable -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bfh/ontologies/SEDAQ#measurementTimestampAvailable">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bfh/ontologies/SEDAQ#MeasurementType"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
     </owl:DatatypeProperty>
     
 
@@ -275,6 +404,27 @@
     
 
 
+    <!-- http://www.semanticweb.org/bfh/ontologies/SEDAQ#provisioningGranularity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bfh/ontologies/SEDAQ#provisioningGranularity">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bfh/ontologies/SEDAQ#MeasurementType"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment>{STREAMING, DISCRETE}</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bfh/ontologies/SEDAQ#publicationTimestampAvailable -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bfh/ontologies/SEDAQ#publicationTimestampAvailable">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bfh/ontologies/SEDAQ#MeasurementType"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.semanticweb.org/bfh/ontologies/SEDAQ#queryLatency -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bfh/ontologies/SEDAQ#queryLatency">
@@ -297,6 +447,16 @@
     
 
 
+    <!-- http://www.semanticweb.org/bfh/ontologies/SEDAQ#reliabilityLevel -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bfh/ontologies/SEDAQ#reliabilityLevel">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bfh/ontologies/SEDAQ#MeasurementType"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.semanticweb.org/bfh/ontologies/SEDAQ#serialNumber -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bfh/ontologies/SEDAQ#serialNumber">
@@ -312,9 +472,16 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bfh/ontologies/SEDAQ#shortDescription">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/bfh/ontologies/SEDAQ#Sensor"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/bfh/ontologies/SEDAQ#MeasurementType"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/bfh/ontologies/SEDAQ#Sensor"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment>human-readable information about the sensor, localized</rdfs:comment>
+        <rdfs:comment>human-readable information, localized</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -324,6 +491,16 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bfh/ontologies/SEDAQ#sourceIsPostProcessed">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/bfh/ontologies/SEDAQ#DataSource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bfh/ontologies/SEDAQ#standardDeviationKnown -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bfh/ontologies/SEDAQ#standardDeviationKnown">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bfh/ontologies/SEDAQ#MeasurementType"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
     </owl:DatatypeProperty>
     
@@ -348,6 +525,7 @@
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://www.semanticweb.org/bfh/ontologies/SEDAQ#DataSource"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/bfh/ontologies/SEDAQ#MeasurementType"/>
                     <rdf:Description rdf:about="http://www.semanticweb.org/bfh/ontologies/SEDAQ#Sensor"/>
                 </owl:unionOf>
             </owl:Class>
@@ -388,6 +566,14 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
         <rdfs:comment>was the installation verified by technical skilled persons, possibly certified by an appropriate legal instance?</rdfs:comment>
     </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#topDataProperty -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#topDataProperty">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </rdf:Description>
     
 
 
