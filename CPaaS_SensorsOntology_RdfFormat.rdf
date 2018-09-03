@@ -255,6 +255,26 @@
     
 
 
+    <!-- http://www.semanticweb.org/bfh/ontologies/SEDAQ#postProcessingDocumentation -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bfh/ontologies/SEDAQ#postProcessingDocumentation">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bfh/ontologies/SEDAQ#DataSource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bfh/ontologies/SEDAQ#postProcessingSuppressible -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bfh/ontologies/SEDAQ#postProcessingSuppressible">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bfh/ontologies/SEDAQ#DataSource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.semanticweb.org/bfh/ontologies/SEDAQ#queryLatency -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bfh/ontologies/SEDAQ#queryLatency">
@@ -299,6 +319,16 @@
     
 
 
+    <!-- http://www.semanticweb.org/bfh/ontologies/SEDAQ#sourceIsPostProcessed -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bfh/ontologies/SEDAQ#sourceIsPostProcessed">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bfh/ontologies/SEDAQ#DataSource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.semanticweb.org/bfh/ontologies/SEDAQ#technicalAPIDocumentation -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bfh/ontologies/SEDAQ#technicalAPIDocumentation">
@@ -314,9 +344,27 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bfh/ontologies/SEDAQ#uniqueID">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/bfh/ontologies/SEDAQ#Sensor"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/bfh/ontologies/SEDAQ#DataSource"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/bfh/ontologies/SEDAQ#Sensor"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment>unique identification at global level</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bfh/ontologies/SEDAQ#url -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bfh/ontologies/SEDAQ#url">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bfh/ontologies/SEDAQ#DataSource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment>URL of the item</rdfs:comment>
     </owl:DatatypeProperty>
     
 
