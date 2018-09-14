@@ -183,6 +183,8 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bfh/ontologies/SEDAQ#currentTimeWindow">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/bfh/ontologies/SEDAQ#MeasurementType"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment>Measurements are available on a minutely, hourly, daily, weekly, … basis. To make interpretation easier one should use URIs for it, for example generalized date-time description URIs of OWL Time ontology like day, hour, minute, etc. See https://www.w3.org/TR/owl-time/#time:GeneralDateTimeDescription</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -441,6 +443,7 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/bfh/ontologies/SEDAQ#Sensor"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment>URL of the physical sensor</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -450,6 +453,8 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bfh/ontologies/SEDAQ#notAvailableSpecialValue">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/bfh/ontologies/SEDAQ#MeasurementMetadata"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The &quot;special value&quot; itself (e.g. 9999 represents NA in the data set). This value usually has to be translated to a specific &quot;null&quot; value of the datatype, for example &quot;NaN&quot; in XSD or &quot;null&quot; in JSON.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -532,7 +537,7 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/bfh/ontologies/SEDAQ#Sensor"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
-        <rdfs:comment>average value for network responses, in [ms]</rdfs:comment>
+        <rdfs:comment>average value for network responses [ms] (mean +/- standard deviation)</rdfs:comment>
     </owl:DatatypeProperty>
     
 
@@ -658,6 +663,17 @@
     
 
 
+    <!-- http://www.semanticweb.org/bfh/ontologies/SEDAQ#timestamp -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bfh/ontologies/SEDAQ#timestamp">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bfh/ontologies/SEDAQ#MeasurementType"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
+        <rdfs:comment>Timestamp of the measurement, TZ data is mandatory.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.semanticweb.org/bfh/ontologies/SEDAQ#timestampFormat -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bfh/ontologies/SEDAQ#timestampFormat">
@@ -715,6 +731,8 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment>IRI of the XSD value type.</rdfs:comment>
     </owl:DatatypeProperty>
     
 
